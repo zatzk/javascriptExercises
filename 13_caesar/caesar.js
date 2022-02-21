@@ -1,5 +1,5 @@
 const caesar = (str, shift) => {
-  return str.split('').map((char) => {
+  return str.split('').map((char) => { // split string into array of characters and map each character to a new array
     let code = char.charCodeAt(0); // this transforms the char into unicode
     let alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
@@ -33,7 +33,7 @@ const caesar = (str, shift) => {
     if((code < 65) || (code > 90 && code < 97) || (code > 122)) { // if the code is not between A and Z or a and z it will return the char
       return String.fromCharCode(code);
     }
-  }).join('');
+  }).join(''); // joins the array of characters into a string
 
 
 
